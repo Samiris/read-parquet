@@ -1,27 +1,29 @@
-project/
-│── main.py
-│── requirements.txt
-│── flights-1m.parquet   
+```
+|--project
+    |-- main.py
+    |-- requirements.txt
+    |-- file.parquet
+```
 
----- Install
+#### pip
 
-python --version
-git clone <replace>
-cd read-parque
-python -m venv venv
-pip install -r requirements.txt
-uvicorn main:app --reload
+python --version  <br>
+git clone https://github.com/Samiris/read-parquet.git  <br>
+cd read-parquet  <br>
+python -m venv venv  <br>
+pip install -r requirements.txt  <br>
+uvicorn main:app --reload  <br>
 
-alternative uv
-Win op 1: irm https://astral.sh/uv/install.ps1 | iex
-Win op 2: pip install uv
-uv --version
-uv init
-uv add fastapi uvicorn pandas pyarrow duckdb
-uv export --format requirements-txt > requirements.txt
+#### uv   
 
-----
+Win Op1: irm https://astral.sh/uv/install.ps1 | iex  <br>
+Win Op2: pip install uv  <br>
+uv --version  <br>
+uv init  <br>
+uv add fastapi uvicorn pandas pyarrow duckdb  <br>
+uv export --format requirements-txt > requirements.txt  <br>
+uvicorn main:app --reload  <br>
 
-GET
-http://127.0.0.1:8000/docs
+#### GET  
+http://127.0.0.1:8000/docs  <br>
 http://127.0.0.1:8000/data/search?page=1&page_size=100&q1=-4&q2=%204
